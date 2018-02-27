@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-area {
+    background: url("images/bg-main-1.1.png") 50% 50%;
+    color: #fff;
+    height: 800px;
+}
+
+.cont {
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.nav-bar {
+    padding-left: 80px;
+}
+
+.selected {
+    color: #f8aa02;
+}
+
+.button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.o-button {
+    display: inline-block;
+    background: #f8aa02;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+.b-button {
+    height: 50px;
+    border-radius: 25px;
+    background: #04aef4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.point-button {
+    width: 181px;
+}
+
+.header-button {
+    width: 225px
+}
+
+.memo-button {
+    width: 140px;
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.link {
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    margin-right: 30px;
+    padding-top: 31px;
+    font: 14px 'Proxima Nova', Georgia, sans-serif;
+    font-weight: 400;
+}
+
+.link:hover {
+    border-top: 3px solid #fab51f;
+}
+
+.header-content {
+    margin-bottom: 207px;
+    padding: 93px 0 0 15px;
+    text-align: left;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 73px;
+}
+
+.header-title {
+    font: 40px 'Gotham pro';
+    font-weight: 700;
+    letter-spacing: 0.001em;
+    margin-bottom: 40px;
+}
+
+.c-block {
+    float: left;
+    width: 14%;
+    height: 150px;
+    text-align: center;
+    padding-top: 22px;
+    font: 17px 'Gilroy', sans-serif;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.country-1 {
+    background-image: url("images/bg-2.1.png");
+}
+
+.country-2 {
+    background-image: url("images/bg-2.2.png");
+}
+
+.country-3 {
+    background-image: url("images/bg-2.3.png");
+}
+
+.country-4 {
+    background-image: url("images/bg-2.4.png");
+}
+
+.country-5 {
+    background-image: url("images/bg-2.5.png");
+}
+
+.country-6 {
+    background-image: url("images/bg-2.6.png");
+}
+
+.c-text {
+    display: block;
+    margin-top: 25px;
+    font: 24px 'Proxima Nova', Georgia, sans-serif;
+}
+
+.c-1-text {
+    display: block;
+    padding: 13px 0;
+    background: #3e3e3e;
+    width: 100%;
+    margin-top: 20px;
+    font: 18px 'Proxima Nova', Georgia, sans-serif;
+    font-weight: 700;
+}
+
+.more {
+    background: #3d3d3d;
+    font-size: 17px;
+}
+
+.c-title {
+    font: 30px 'Gilroy', sans-serif;
+    font-weight: 800;
+}
+
+.fund-raising {
+    background: url("images/bg-main-1.2.png") no-repeat;
+    text-align: center;
+    height: 49px;
+    padding-top: 16px;
+    color: #000;
+    font: 18px 'Proxima Nova', Georgia, sans-serif;
+    font-weight: 700;
+}
+
+.countries {
+    height: 150px;
+}
+
+.countries-area {
+    margin-bottom: 69px;
+    margin-top: -80px;
+    color: #fff;
+}
+
+.advantages-area {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.adv-title {
+    display: block;
+    color: #354052;
+    margin-bottom: 31px;
+    font: 24px 'Proxima Nova', Georgia, sans-serif;
+    font-weight: 700;
+}
+
+.adv-image {
+    float: left;
+    background: url("images/im-3.1.png");
+    width: 465px;
+    height: 629px;
+    margin: 0 56px 0 40px;
+}
+
+.icon {
+    float: left;
+    margin-right: 22px;
+}
+
+.point {
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+    height: 140px;
+    font: 16px 'Proxima Nova', Georgia, sans-serif;
+}
+
+.last-point {
+    height: auto;
+}
+
+.p-title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.p-text {
+    width: 89%;
+    float: left;
+    margin-top: 0;
+}
+
+.left-col {
+    background: #59aff2;
+    height: 488px;
+}
+
+.right-col {
+    background: url('images/bg-4.1.jpg');
+    height: 488px;
+    background-size: cover;
+}
+.about-text {
+    max-width: 622px;
+    color: #fff;
+    float: right;
+    text-align: left;
+}
+.about {
+    font: 18px 'Gilroy', sans-serif;
+    font-weight: 300;
+}
+.about-title {
+    display: block;
+    font: 36px 'Proxima Nova', Georgia, sans-serif;
+    font-weight: 700;
+    margin-top: 84px;
+}
