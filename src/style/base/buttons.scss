@@ -1,0 +1,51 @@
+@import "../base/media";
+.btn {
+  cursor:      pointer;
+  outline:     none;
+  border:      none;
+  color:       $white;
+  font-size:   0.89rem;
+  font-weight: $bold;
+}
+
+.btn_orange {
+  background:    $orange;
+  height:        40px;
+  border-radius: 20px;
+  box-shadow:    0 0 30px rgba(248, 170, 2, 0.5);
+}
+
+.btn_blue {
+  background:    $blue;
+  width:         225px;
+  height:        50px;
+  border-radius: 25px;
+  font-family:   'Open Sans', sans-serif;
+  font-weight:   600;
+  box-shadow:    0 0 30px rgba(4, 174, 244, 0.5);
+}
+
+.btn__form_blue {
+  width: 221px;
+  @extend .btn_blue;
+}
+
+.btn__reg_blue {
+  width: 183px;
+  @extend .btn_blue;
+}
+
+.btn__countries_orange {
+  width:       140px;
+  margin-top:  30px;
+  font-family: 'Open Sans', sans-serif;
+  @extend .btn_orange;
+}
+
+.btn__nav_orange {
+  position:   absolute;
+  right:      0;
+  width:      181px;
+  margin-top: 16px;
+  @extend .btn_orange;
+}

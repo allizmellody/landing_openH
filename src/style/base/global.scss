@@ -1,0 +1,67 @@
+@import "../base/media";
+html {
+  font-size:   $main-font;
+  font-family: 'Proxima Nova', sans-serif;
+  color:       $primary-color;
+}
+
+body {
+  margin:  0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.selected {
+  display: inline;
+  color:   $orange;
+}
+
+.bold {
+  display:     inline;
+  font-weight: $bold;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width:  1170px;
+  margin:     0 auto;
+}
+
+.container_shadow {
+  box-shadow: $shadow;
+  @extend .container;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-weight:   $extraBold;
+  font-size:     2.67rem;
+}
+
+.title_margin_big {
+  margin-bottom: 40px;
+  font-family:   'Gilroy', sans-serif;
+  @extend .title;
+}
+
+.title_camel {
+  text-transform: capitalize;
+  @extend .title;
+}
+
+.input {
+  cursor:        pointer;
+  border:        1px solid #dfe3e9;
+  color:         $asphalt;
+  padding-left:  22px;
+  border-radius: 4px;
+  font-size:     1.29rem;
+
+  &:hover, &:focus {
+    outline: none;
+    border:  1px solid $blue;
+  }
+}

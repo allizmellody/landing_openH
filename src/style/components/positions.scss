@@ -1,0 +1,60 @@
+.positions__area {
+  text-align:    center;
+  margin-bottom: 71px;
+}
+
+.positions__title_main {
+  color:         $asphalt;
+  margin-bottom: 33px;
+  font-size:     1.33rem;
+  font-weight:   $bold;
+}
+
+.positions__column_shadow {
+  max-width:  465px;
+  height:     629px;
+  margin:     0 55px 0 38px;
+  box-shadow: $shadow;
+}
+
+.positions__column {
+  padding-right: 15px;
+}
+
+.positions__item {
+  text-align: left;
+  font-size:  0.89rem;
+}
+
+.positions__icon {
+  float:        left;
+  margin-right: 15px;
+}
+
+.positions__text {
+  float: left;
+  width: 85%;
+}
+
+.positions__title {
+  color:         #2a2828;
+  margin-bottom: 11px;
+  font-size:     $main-font;
+  font-weight:   $bold;
+}
+
+.positions__text_first {
+  margin-bottom: 46px;
+}
+
+.positions__text_second {
+  margin-bottom: 69px;
+}
+
+.positions__text_third {
+  margin-bottom: 58px;
+}
+
+.positions__text_fourth {
+  margin-bottom: 52px;
+}

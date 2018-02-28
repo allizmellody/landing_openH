@@ -1,0 +1,142 @@
+@import "../base/media";
+.header__area {
+  color: $white;
+}
+
+.header__back {
+  position:        absolute;
+  background:      url('../../img/header-bg.png') 50% 50%;
+  background-size: cover;
+  width:           100%;
+  height:          800px;
+  z-index:         -1;
+}
+
+.header {
+  position:      relative;
+  margin-bottom: 90px;
+  padding-left:  83px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color:           $gray;
+  margin-right:    30px;
+  padding-top:     28px;
+  border-top:      3px solid transparent;
+  font-size:       0.78rem;
+
+  &:hover {
+    border-top: 3px solid $orange;
+  }
+}
+
+.header__content {
+  margin-bottom: 212px;
+  padding-left:  15px;
+  text-align:    left;
+}
+
+.header__logo {
+  display:       block;
+  margin-bottom: 76px;
+}
+
+.header__title {
+  font:           2.22rem 'Gotham pro';
+  font-weight:    $bold;
+  letter-spacing: 0.001em;
+  margin-bottom:  39px;
+}
+
+.countries__container_shadow {
+  margin-bottom: 69px;
+  color:         $white;
+  box-shadow:    $shadow;
+}
+
+.countries__line {
+  background: linear-gradient(to top right, $orange, #fb726b);
+  width:      100%;
+  height:     5px;
+}
+
+.countries__area {
+  height: 150px;
+}
+
+.countries__item {
+  box-sizing:        border-box;
+  width:             15%;
+  height:            150px;
+  text-align:        center;
+  margin-right:      -1px;
+  padding-top:       21px;
+  font:              0.94rem 'Gilroy', sans-serif;
+  font-weight:       $light;
+  background-repeat: no-repeat;
+  background-size:   cover;
+  line-height:       20px;
+}
+
+.countries__item_first {
+  background-image: url('../../img/countries-1.png');
+}
+
+.countries__text_backed {
+  background:     #3e3e3e;
+  width:          100%;
+  margin-top:     20px;
+  padding-top:    13px;
+  padding-bottom: 10px;
+  opacity:        0.9;
+  font-weight:    $bold;
+}
+
+.countries__item_second {
+  background-image: url('../../img/countries-2.png');
+}
+
+.countries__item_third {
+  background-image: url('../../img/countries-3.png');
+}
+
+.countries__item_fourth {
+  background-image: url('../../img/countries-4.png');
+}
+
+.countries__item_fifth {
+  background-image: url('../../img/countries-5.png');
+}
+
+.countries__item_sixth {
+  background-image: url('../../img/countries-6.png');
+}
+
+.countries__item_right {
+  background:   $primary-color;
+  width:        14%;
+  margin-right: 0;
+  padding-top:  16px;
+  font-size:    0.94rem;
+  @extend .countries__item;
+}
+
+.countries__text {
+  margin-top: 25px;
+  font-size:  1.33rem;
+}
+
+.countries__title {
+  font:        1.67rem 'Gilroy', sans-serif;
+  font-weight: $extraBold;
+}
+
+.countries__raising {
+  background:  url('../../img/progress-bg.png') no-repeat;
+  text-align:  center;
+  height:      34px;
+  padding-top: 16px;
+  color:       $asphalt;
+  font-weight: $bold;
+}

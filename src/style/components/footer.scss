@@ -1,0 +1,125 @@
+.footer__back {
+  background: $primary-color;
+}
+
+.footer__area {
+  color:   $gray;
+  padding: 39px 15px 21px;
+}
+
+.footer__text {
+  font-size:  0.78rem;
+  color:      #727272;
+  margin-top: 69px;
+}
+
+.footer__title {
+  color:         $white;
+  font-size:     1.33rem;
+  margin-bottom: 29px;
+}
+
+.link {
+  text-decoration: none;
+  color:           $gray;
+}
+
+.footer__column_small {
+  width:        15%;
+  margin-right: 20px;
+}
+
+.footer__column_medium {
+  width: 20%;
+}
+
+.footer__column_big {
+  position: relative;
+  width:    25%;
+}
+
+.footer__column_cont {
+  margin-right: 47px;
+}
+
+.footer__column_vk {
+  margin-right: 30px;
+}
+
+.footer__column_fb {
+  margin-right: 40px;
+}
+
+.footer__title_margin {
+  margin-left: 25px;
+}
+
+// companies
+.footer__list {
+  list-style: none;
+  padding:    0;
+  font-size:  0.89rem;
+  li {
+    margin-bottom: 20px;
+  }
+  .link:hover {
+    color:         $white;
+    border-bottom: 1px solid $orange;
+    font-weight:   $bold;
+  }
+}
+
+// contacts
+.footer__contacts {
+  font: 0.89rem 'Lato', sans-serif;
+}
+
+.contacts__icon {
+  width:        16px;
+  height:       16px;
+  margin-right: 9px;
+}
+
+.contacts__icon_big {
+  width:        12px;
+  height:       17px;
+  margin-right: 9px;
+}
+
+.contacts__text {
+  margin-bottom: 30px;
+}
+
+.contacts__text_small {
+  margin-top: 10px;
+  font-size:  0.67rem;
+}
+
+.contacts__item_margin {
+  margin-bottom: 20px;
+}
+
+.contacts__email {
+  float: right;
+}
+
+// right
+.footer__logo {
+  margin-bottom: 13px;
+}
+
+.footer__text_small {
+  font-size: 0.67rem;
+}
+
+.worked {
+  align-items: baseline;
+  position:    absolute;
+  bottom:      0;
+  font:        0.78rem 'Myriad Pro';
+  .company {
+    margin-left: 26px;
+    font:        0.89rem 'Gilroy', sans-serif;
+    font-weight: $extraBold;
+  }
+}

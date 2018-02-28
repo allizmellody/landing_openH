@@ -1,0 +1,48 @@
+.advantages {
+  padding-left: 76px;
+}
+
+.advantages__text {
+  margin-top:    16px;
+  margin-bottom: 63px;
+}
+
+.advantages__logo {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.advantages__area {
+  text-align:    center;
+  margin-bottom: 84px;
+  padding:       0 97px 0 15px;
+  font:          $main-font 'Gilroy', sans-serif;
+}
+
+.advantages__line_first {
+  margin-top: 56px;
+}
+
+.advantages__item_middle {
+  width:      33%;
+  margin-top: 141px;
+}
+
+.advantages__item_central {
+  margin: 63px auto 0 auto;
+  @extend .advantages__item_middle;
+}
+
+.advantages_line_last {
+  margin-top: 94px;
+}
+
+.advantages__item {
+  width: $half;
+}
+
+.advantages__image {
+  width:  240px;
+  height: 240px;
+  margin: 0 auto;
+}

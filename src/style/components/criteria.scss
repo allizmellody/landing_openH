@@ -1,0 +1,50 @@
+.criteria__area {
+  padding-left: 57px;
+  text-align:   center;
+  font-size:    1.11rem;
+}
+
+.criteria__title {
+  margin-bottom: 55px;
+  font-size:     2rem;
+  font-weight:   $bold;
+}
+
+.flex_end {
+  justify-content: flex-end;
+  @extend .flex;
+}
+
+.criteria__item {
+  text-align: left;
+  max-width:  600px;
+}
+
+.criteria__item_first {
+  margin-bottom: 47px;
+  @extend .criteria__item;
+}
+
+.criteria__item_second {
+  margin-bottom: 102px;
+  @extend .criteria__item;
+}
+
+.criteria__item_third {
+  max-width:     700px;
+  margin-bottom: 99px;
+  @extend .criteria__item;
+}
+
+.criteria__item_fourth {
+  margin-bottom: 61px;
+  @extend .criteria__item;
+}
+
+.criteria__count {
+  float:        left;
+  color:        #11d1a1;
+  margin-right: 40px;
+  font:         4rem 'Gilroy', sans-serif;
+  font-weight:  $extraBold;
+}

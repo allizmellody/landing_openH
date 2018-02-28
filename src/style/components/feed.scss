@@ -1,0 +1,64 @@
+.feed__back_shadow {
+  background: url('../img/feedback-bg.png') no-repeat;
+  background-size: cover;
+  min-height: 545px;
+  box-shadow: $shadow;
+}
+
+.feed__back_opacity {
+  background-color: rgba(61, 61, 61, 0.8);
+  padding-top: 45px;
+  padding-bottom: 52px;
+}
+
+.feed__area {
+  text-align: center;
+  color: $white;
+  max-width: 555px;
+  margin: 0 auto;
+}
+
+.feed__title {
+  margin-bottom: 21px;
+  font: 2rem 'Gilroy', sans-serif;
+  font-weight: $extraBold;
+}
+
+.feed__form {
+  max-width: 390px;
+  margin: 35px auto 0 auto;
+}
+
+.feed__input {
+  width: 361px;
+  height: 50px;
+  margin-bottom: 17px;
+}
+
+.feed__label {
+  display: block;
+  text-align: left;
+  font-size: 0.78rem;
+  margin-bottom: 46px;
+}
+
+.input_checkbox {
+  float: left;
+  cursor: pointer;
+  outline: none;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.feed__map {
+  text-align: center;
+}
+
+.map__title {
+  color: $asphalt;
+  margin: 16px 0 14px;
+  font: 1.33rem 'Gilroy', sans-serif;
+  font-weight: $extraBold;
+}
+

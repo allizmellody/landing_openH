@@ -1,0 +1,25 @@
+.sequence__back {
+  background: url("../img/sequence-bg.png") no-repeat;
+  background-size: cover;
+}
+
+.sequence__area {
+  padding: 0 0 160px 76px;
+  margin-bottom: 40px;
+  font: $main-font 'Gilroy', sans-serif;
+  font-weight: $light;
+}
+
+.warning {
+  margin-top: 52px;
+  padding-right: 52px;
+}
+
+.warning__text {
+  color: $dark-gray;
+  font-size: 0.72rem;
+}
+
+.sequence__text {
+  margin-bottom: 75px;
+}
