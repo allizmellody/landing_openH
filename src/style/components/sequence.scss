@@ -1,25 +1,123 @@
 .sequence__back {
-  background: url("../img/sequence-bg.png") no-repeat;
+  background:      url("../img/sequence-bg.png") no-repeat;
   background-size: cover;
 }
 
 .sequence__area {
-  padding: 0 0 160px 76px;
+  padding:       0 0 160px 76px;
   margin-bottom: 40px;
-  font: $main-font 'Gilroy', sans-serif;
-  font-weight: $light;
+  font:          $main-font 'Gilroy', sans-serif;
+  font-weight:   $light;
 }
 
 .warning {
-  margin-top: 52px;
+  margin-top:    52px;
   padding-right: 52px;
 }
 
 .warning__text {
-  color: $dark-gray;
-  font-size: 0.72rem;
+  color:     $dark-gray;
+  font-size: .72rem;
 }
 
 .sequence__text {
   margin-bottom: 75px;
+}
+
+.steps {
+  padding:     50px 0 50px;
+  font-size:   0;
+  font-family: sans-serif;
+}
+
+.steps__item {
+  display:          inline-block;
+  position:         relative;
+  vertical-align:   middle;
+  transform-origin: 0 50%;
+}
+
+.steps__item .steps__item {
+  position:     absolute;
+  padding-left: 50px;
+}
+
+.steps__item .steps__item:before {
+  content:    "";
+  position:   absolute;
+  z-index:    0;
+  top:        50%;
+  right:      0;
+  left:       0;
+  width:      8.44rem;
+  height:     4px;
+  background: #1d95ee;
+}
+
+.steps__wrapper {
+  display:          inline-block;
+  vertical-align:   middle;
+  transform-origin: 0 50%;
+}
+
+.steps__link {
+  display:         inline-block;
+  font:            .67rem 'Gilroy';
+  font-weight:     300;
+  line-height:     20px;
+  position:        relative;
+  width:           1.22rem;
+  height:          1.22rem;
+  margin:          0 0 -100%;
+  border-radius:   50%;
+  color:           #fff;
+  background:      #f8aa02;
+  vertical-align:  middle;
+  text-align:      center;
+  text-decoration: none;
+  transform:       translate(50%, -50%);
+  z-index: 1;
+}
+
+.steps__link_2 {
+  transform: translate(100%, -50%);
+}
+
+.steps__link_3 {
+  transform: translate(150%, -50%);
+}
+
+.steps__link_4 {
+  transform: translate(200%, -50%);
+}
+
+.steps__link_5 {
+  transform: translate(250%, -50%);
+}
+
+.steps__link_6 {
+  transform: translate(300%, -50%);
+}
+
+.steps__link_7 {
+  transform: translate(350%, -50%);
+}
+
+.steps__link_8 {
+  transform: translate(400%, -50%);
+}
+
+.item__text {
+  position:  absolute;
+  color:     $primary-color;
+  font-size: .89rem;
+}
+
+.item__text_up {
+  bottom: 0;
+  margin-bottom: 27px;
+}
+
+.item__text_down {
+  margin-top: 27px;
 }

@@ -24,7 +24,7 @@
   margin-right:    30px;
   padding-top:     28px;
   border-top:      3px solid transparent;
-  font-size:       0.78rem;
+  font-size:       .78rem;
 
   &:hover {
     border-top: 3px solid $orange;
@@ -45,7 +45,7 @@
 .header__title {
   font:           2.22rem 'Gotham pro';
   font-weight:    $bold;
-  letter-spacing: 0.001em;
+  letter-spacing: .001em;
   margin-bottom:  39px;
 }
 
@@ -72,7 +72,7 @@
   text-align:        center;
   margin-right:      -1px;
   padding-top:       21px;
-  font:              0.94rem 'Gilroy', sans-serif;
+  font:              .94rem 'Gilroy', sans-serif;
   font-weight:       $light;
   background-repeat: no-repeat;
   background-size:   cover;
@@ -89,7 +89,7 @@
   margin-top:     20px;
   padding-top:    13px;
   padding-bottom: 10px;
-  opacity:        0.9;
+  opacity:        .9;
   font-weight:    $bold;
 }
 
@@ -118,7 +118,7 @@
   width:        14%;
   margin-right: 0;
   padding-top:  16px;
-  font-size:    0.94rem;
+  font-size:    .94rem;
   @extend .countries__item;
 }
 
