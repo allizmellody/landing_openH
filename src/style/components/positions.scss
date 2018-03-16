@@ -1,60 +1,184 @@
-.positions__area {
+@import '../base/mixins';
+
+.positions {
   text-align:    center;
   margin-bottom: 71px;
-}
 
-.positions__title_main {
-  color:         $asphalt;
-  margin-bottom: 33px;
-  font-size:     1.33rem;
-  font-weight:   $bold;
-}
+  @include MQ (ML) { margin-bottom: 50px; }
+  @include MQ (M) { margin-bottom: 30px; }
+  @include MQ (S) { margin-bottom: 15px; }
 
-.positions__column_shadow {
-  max-width:  465px;
-  height:     629px;
-  margin:     0 55px 0 38px;
-  box-shadow: $shadow;
-}
+  &__area {
+    @include MQ (S) {
+      display: block;
+      padding: 0 10px;
+    }
+  }
+  &__title {
+    color: $asphalt;
+    @include proximaTitle(1.33rem, 33px);
 
-.positions__column {
-  padding-right: 15px;
-}
+    @include MQ (M) { margin-bottom: 23px; }
+    @include MQ (S) { margin-bottom: 13px; }
 
-.positions__item {
-  text-align: left;
-  font-size:  .89rem;
-}
+    &_small {
+      color: #2a2828;
+      @include proximaTitle(1rem, 11px);
 
-.positions__icon {
-  float:        left;
-  margin-right: 15px;
-}
+      @include MQ (S) { margin-bottom: 7px; }
+    }
+  }
 
-.positions__text {
-  float: left;
-  width: 85%;
-}
+  &__column {
+    padding-right: 15px;
 
-.positions__title {
-  color:         #2a2828;
-  margin-bottom: 11px;
-  font-size:     $main-font;
-  font-weight:   $bold;
-}
+    &_shadow {
+      width:      25.8rem;
+      height:     34.9rem;
+      margin:     0 55px 0 38px;
+      box-shadow: $shadow;
 
-.positions__text_first {
-  margin-bottom: 46px;
-}
+      @include MQ (ML) { margin-right: 35px; }
+      @include MQ (M) { margin-right: 25px; }
+      @include MQ (S) {
+        float:  left;
+        width:  18.8rem;
+        height: 26.9rem;
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
 
-.positions__text_second {
-  margin-bottom: 69px;
-}
+  &__item {
+    text-align: left;
+    font-size:  .89rem;
+  }
 
-.positions__text_third {
-  margin-bottom: 58px;
-}
+  &__icon {
+    float:                 left;
+    margin-right:          15px;
+    background:            url("../../img/icons/posinions.png") no-repeat;
+    background-size:       auto 48px;
+    background-position-y: -3px;
 
-.positions__text_fourth {
-  margin-bottom: 52px;
+    @include MQ (SM) {
+      background-size:       auto 29px;
+      background-position-y: -1px;
+    }
+    @include MQ (S) {
+      margin-right:          5px;
+      background-size:       auto 16px;
+      background-position-y: 0;
+    }
+
+    &_1 {
+      width:                 33px;
+      height:                29px;
+      background-position-x: 22%;
+
+      @include MQ (SM) {
+        width:  19px;
+        height: 19px;
+      }
+      @include MQ (S) {
+        width:  10px;
+        height: 11px;
+      }
+    }
+    &_2 {
+      width:                 35px;
+      height:                25px;
+      background-position-x: 70%;
+
+      @include MQ (SM) {
+        width:  21px;
+        height: 16px;
+      }
+      @include MQ (S) {
+        width:  12px;
+        height: 10px;
+      }
+    }
+    &_3 {
+      width:                 36px;
+      height:                44px;
+      background-position-x: 98%;
+
+      @include MQ (SM) {
+        width:  22px;
+        height: 27px;
+      }
+      @include MQ (S) {
+        width:  13px;
+        height: 16px;
+      }
+    }
+    &_4 {
+      width:                 30px;
+      height:                40px;
+      background-position-x: 45%;
+
+      @include MQ (SM) {
+        width:  18px;
+        height: 25px;
+      }
+      @include MQ (S) {
+        width:  10px;
+        height: 14px;
+      }
+    }
+    &_5 {
+      width:                 25px;
+      height:                29px;
+      background-position-x: 2%;
+
+      @include MQ (SM) {
+        width:  16px;
+        height: 19px;
+      }
+      @include MQ (S) {
+        width:  9px;
+        height: 11px;
+      }
+    }
+  }
+
+  &__text {
+    &_wrapped {
+      display: inline-block;
+      width:   85%;
+
+      @include MQ (M) {
+        display: block;
+        width:   100%;
+      }
+    }
+    &_first {
+      margin-bottom: 46px;
+
+      @include MQ (L) { margin-bottom: 36px; }
+      @include MQ (ML) { margin-bottom: 26px; }
+    }
+    &_second {
+      margin-bottom: 69px;
+
+      @include MQ (L) { margin-bottom: 59px; }
+      @include MQ (ML) { margin-bottom: 49px; }
+    }
+    &_third {
+      margin-bottom: 58px;
+
+      @include MQ (L) { margin-bottom: 48px; }
+      @include MQ (ML) { margin-bottom: 38px; }
+    }
+    &_fourth {
+      margin-bottom: 52px;
+
+      @include MQ (L) { margin-bottom: 52px; }
+      @include MQ (ML) { margin-bottom: 42px; }
+    }
+
+    @include MQ (SM) { margin-bottom: 25px; }
+    @include MQ (S) { margin-bottom: 15px; }
+  }
 }

@@ -1,51 +1,144 @@
-@import "../base/media";
+@import '../base/mixins';
+
 .btn {
   cursor:      pointer;
   outline:     none;
   border:      none;
   color:       $white;
-  font-size:   .89rem;
-  font-weight: $bold;
-}
+  font:        .89rem $openSans;
+  font-weight: $semiBold;
 
-.btn_orange {
-  background:    $orange;
-  height:        40px;
-  border-radius: 20px;
-  box-shadow:    0 0 30px rgba(248, 170, 2, 0.5);
-}
+  &_orange {
+    background:     $orange;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    border-radius:  20px;
 
-.btn_blue {
-  background:    $blue;
-  width:         225px;
-  height:        50px;
-  border-radius: 25px;
-  font-family:   'Open Sans', sans-serif;
-  font-weight:   600;
-  box-shadow:    0 0 30px rgba(4, 174, 244, 0.5);
-}
+    &:hover { box-shadow: 0 6px 12px 0 rgba(248, 170, 2, 0.32); }
 
-.btn__form_blue {
-  width: 221px;
-  @extend .btn_blue;
-}
+    @include MQ (L) {
+      padding-top:    7px;
+      padding-bottom: 7px;
+    }
+    @include MQ (M) {
+      padding-top:    5px;
+      padding-bottom: 5px;
+    }
+  }
 
-.btn__reg_blue {
-  width: 183px;
-  @extend .btn_blue;
-}
+  &_blue {
+    background:    $blue;
+    padding:       14px 25px;
+    border-radius: 25px;
 
-.btn__countries_orange {
-  width:       140px;
-  margin-top:  30px;
-  font-family: 'Open Sans', sans-serif;
-  @extend .btn_orange;
-}
+    &:hover { box-shadow: 0 12px 24px 0 rgba($blue, 0.32); }
 
-.btn__nav_orange {
-  position:   absolute;
-  right:      0;
-  width:      181px;
-  margin-top: 16px;
-  @extend .btn_orange;
+    @include MQ (L) { padding: 12px 25px; }
+    @include MQ (M) { padding: 10px 20px; }
+    @include MQ (SM) { padding: 7px 15px; }
+    @include MQ (S) { padding: 5px 15px; }
+
+    &_big {
+      padding-left:  40px;
+      padding-right: 40px;
+      @extend .btn_blue;
+
+      @include MQ (ML) {
+        padding-left:  30px;
+        padding-right: 30px;
+      }
+      @include MQ (SM) {
+        padding-left:  25px;
+        padding-right: 25px;
+      }
+      @include MQ (S) {
+        padding-left:  20px;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__form_blue {
+    padding: 12px 40px;
+    @extend .btn_blue;
+
+    @include MQ (ML) { padding: 9px 30px; }
+    @include MQ (M) { padding: 6px 20px; }
+  }
+
+  &__countries_orange {
+    padding-left:  15px;
+    padding-right: 15px;
+    @extend .btn_orange;
+
+    @include MQ (M) { padding: 4px 10px 5px 10px; }
+    @include MQ (SM) {
+      padding-top:    2px;
+      padding-bottom: 4px;
+    }
+    @include MQ (S) {
+      width:         100%;
+      padding:       3px;
+      border-radius: 0;
+      font-size:     .72rem;
+    }
+  }
+
+  &__nav_orange {
+    position:      absolute;
+    right:         0;
+    margin-top:    16px;
+    padding-left:  27px;
+    padding-right: 27px;
+    font-family:   $proximaNova;
+    @extend .btn_orange;
+
+    @include MQ (L) {
+      margin-top:    20px;
+      margin-right:  20px;
+      padding-left:  25px;
+      padding-right: 25px;
+    }
+    @include MQ (ML) {
+      margin:        15px 10px 0 0;
+      padding-left:  20px;
+      padding-right: 20px;
+    }
+    @include MQ (M) {
+      height:        100%;
+      margin-top:    0;
+      padding-left:  15px;
+      padding-right: 15px;
+      border-radius: 0;
+      background:    none;
+      border:        1px solid transparent;
+      &:hover {
+        border-left:  1px solid $orange;
+        box-shadow:   none;
+        background:   rgba(61, 61, 61, 0.3);
+        border-right: 1px solid $orange;
+      }
+    }
+    @include MQ (SM) {
+      padding-left:  13px;
+      padding-right: 13px;
+    }
+    @include MQ (S) { padding: 3px 10px; }
+  }
+
+  &__feed_blue {
+    padding: 14px 45px;
+    @extend .btn_blue;
+
+    @include MQ (L) { padding: 12px 40px; }
+    @include MQ (ML) { padding: 10px 35px; }
+    @include MQ (SM) { padding: 7px 25px; }
+    @include MQ (S) { padding: 6px 20px; }
+  }
+
+  &__menu {
+    display: none;
+
+    &:checked ~ .header__label + .header__nav { display: block; }
+  }
 }

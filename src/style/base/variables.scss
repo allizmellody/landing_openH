@@ -1,5 +1,15 @@
-$main-font: 18px;
+$S: 510px;
+$SM: 620px;
+$M: 768px;
+$ML: 850px;
+$L: 1024px;
+
 $half: 50%;
+
+$proximaNova: 'Proxima Nova', sans-serif, Arial, Tahoma;
+$gilroy: 'Gilroy', sans-serif, Arial, Tahoma;
+$openSans: 'Open Sans', sans-serif, Arial;
+$lato: 'Lato', sans-serif, Arial;
 
 $shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 $primary-color: #3d3d3d;
@@ -13,6 +23,7 @@ $blue: #04aef4;
 $dark-blue: #1d95ee;
 $orange: #f8aa02;
 
-$extraBold: 800;
-$bold: 700;
 $light: 300;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;

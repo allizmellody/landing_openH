@@ -1,84 +1,139 @@
-.sources__back {
-  position: relative;
-  background: #f2fbfe;
-}
+@import '../base/mixins';
 
-.sources__back:before, .sources__back:after {
-  content: '';
-  position: absolute;
-  background: inherit;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.sources__back:before {
-  top: 0;
-  transform-origin: left top;
-  transform: skewY(-5deg);
-}
-
-.sources__back:after {
-  bottom: 0;
-}
-
-.sources__area {
-  text-align: center;
+.sources {
+  text-align:    center;
   margin-bottom: 54px;
-  padding: 0 76px 63px;
-  font-weight: $light;
-}
+  padding:       0 76px 63px;
+  font-weight:   $light;
 
-.sources__text {
-  text-align: left;
-  width: 800px;
-  margin: 206px 0 56px;
-  font: $main-font 'Gilroy', sans-serif;
-}
+  @include MQ (ML) {
+    margin-bottom:  34px;
+    padding-bottom: 33px;
+  }
+  @include MQ (M) {
+    margin-bottom: 34px;
+    padding:       0 40px 33px;
+  }
+  @include MQ (SM) { padding: 0 40px 33px }
+  @include MQ (S) {
+    margin-bottom: 14px;
+    padding:       0 20px 20px;
+  }
 
-.sources__item {
-  text-align:    left;
-  margin-bottom: 60px;
-}
+  &__back {
+    background: #f2fbfe;
+    @include angle(before)
+  }
 
-.sources__item_third {
-  text-align: left;
-  margin-bottom: 0;
-}
+  &__text {
+    text-align: left;
+    margin:     206px 0 56px;
+    font:       1rem $gilroy;
 
-.sources__content {
-  background: $white;
-  width: $half;
-  padding: 39px 22px;
-}
+    @include MQ (ML) { margin: 106px 0 36px; }
+    @include MQ (SM) { margin: 86px 0 20px; }
+    @include MQ (S) {
+      line-height: 9px;
+      margin-top:  46px;
+    }
 
-.sources__title {
-  display: block;
-  color: $blue;
-  margin-bottom: 19px;
-  font-size: 2rem;
-  font-weight: $bold;
-}
+    &_inline { margin-bottom: 0; }
+  }
 
-.sources__image_first {
-  background: url('../img/source-im-1.png');
-  @extend .sources__image;
-}
+  &__item {
+    @include MQ (SM) {
+      display:  block;
+      position: relative;
+    }
 
-.sources__image_second {
-  background: url('../img/source-im-2.png');
-  @extend .sources__image;
-}
+    &_wrap {
+      text-align:    left;
+      margin-bottom: 60px;
 
-.sources__image_third {
-  width: $half;
-}
+      @include MQ (ML) { margin-bottom: 30px; }
+      @include MQ (S) { margin-bottom: 15px; }
+    }
+    &_third {
+      text-align:    left;
+      margin-bottom: 0;
 
-.sources__image {
-  box-sizing: border-box;
-  padding: 181px 56px;
-  width: $half;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+      @include MQ (SM) { text-align: center; }
+    }
+  }
 
+  &__content {
+    flex:       1;
+    background: $white;
+    padding:    39px 22px;
+
+    @include MQ (ML) { padding: 29px 15px; }
+    @include MQ (M) { padding-top: 19px; }
+    @include MQ (S) { padding: 9px 10px; }
+  }
+
+  &__title {
+    color: $blue;
+    @include proximaTitle(2rem, 19px);
+
+    @include MQ (M) { margin-bottom: 10px; }
+  }
+
+  &__image {
+    flex:              1;
+    position:          relative;
+    box-sizing:        border-box;
+    background-repeat: no-repeat;
+    background-size:   cover;
+    padding-left:      3%;
+
+    @include MQ (SM) {
+      position: absolute;
+      top:      10%;
+      right:    0;
+    }
+
+    &_first {
+      background-image: url('../img/source-im-1.png');
+      @extend .sources__image;
+    }
+    &_second {
+      background-image: url('../img/source-im-2.png');
+      @extend .sources__image;
+    }
+    &_third {
+      background-image: url('../img/source-im-3.png');
+      @extend .sources__image;
+    }
+  }
+
+  &__logo {
+    position: inherit;
+
+    &_first {
+      width:  20.7rem;
+      height: 6.7rem;
+    }
+    &_second {
+      width:  19.6rem;
+      height: 5.2rem;
+    }
+  }
+
+  .logo__link {
+    position: absolute;
+    top:      40%;
+    @extend .sources__logo;
+
+    @include MQ (SM) {
+      top:   10%;
+      right: 25%;
+    }
+
+    &_first {
+      @extend .sources__logo_first;
+    }
+    &_second {
+      @extend .sources__logo_second;
+    }
+  }
+}

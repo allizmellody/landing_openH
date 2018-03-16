@@ -1,2 +1,95 @@
+@mixin MQ ($canvas) {
+  @if $canvas == S {
+    @media only screen and (max-width: $S) { @content; }
+  } @else if $canvas == SM {
+    @media only screen and (max-width: $SM) { @content; }
+  } @else if $canvas == M {
+    @media only screen and (max-width: $M) { @content; }
+  } @else if $canvas == ML {
+    @media only screen and (max-width: $ML) { @content; }
+  } @else if $canvas == L {
+    @media only screen and (max-width: $L) { @content; }
+  }
+}
 
+@mixin gilroyTitle ($size, $margin) {
+  font:          $size $gilroy;
+  font-weight:   $extraBold;
+  margin-bottom: $margin;
+}
 
+@mixin proximaTitle ($size, $margin) {
+  font:          $size $proximaNova;
+  font-weight:   $bold;
+  margin-bottom: $margin;
+}
+
+@mixin angle ($pseudo, $flip: false, $angle: 4deg) {
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index:  -1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      content:                     '';
+      display:                     block;
+      position:                    absolute;
+      background:                  inherit;
+      left:                        0;
+      right:                       0;
+      height:                      100%;
+      z-index:                     -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform:        skewY($angle);
+          transform-origin: 100%;
+        } @else {
+          transform:        skewY($angle * -1);
+          transform-origin: 0 100%;
+        }
+      }
+    }
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform:        skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform:        skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform:        skewY($angle);
+          transform-origin: 100%;
+        } @else {
+          transform:        skewY($angle * -1);
+          transform-origin: 0 100%;
+        }
+      }
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform:        skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform:        skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}

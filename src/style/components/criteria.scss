@@ -1,50 +1,45 @@
-.criteria__area {
-  padding-left: 57px;
-  text-align:   center;
-  font-size:    1.11rem;
-}
+@import '../base/mixins';
 
-.criteria__title {
-  margin-bottom: 55px;
-  font-size:     2rem;
-  font-weight:   $bold;
-}
+.criteria {
+  padding:    0 10px 0 57px;
+  text-align: center;
+  font-size:  1.11rem;
 
-.flex_end {
-  justify-content: flex-end;
-  @extend .flex;
-}
+  @include MQ (M) { padding-left: 40px; }
+  @include MQ (S) { padding-left: 20px; }
 
-.criteria__item {
-  text-align: left;
-  max-width:  600px;
-}
+  &__title {
+    @include proximaTitle(2rem, 55px);
 
-.criteria__item_first {
-  margin-bottom: 47px;
-  @extend .criteria__item;
-}
+    @include MQ (ML) { margin-bottom: 25px; }
+    @include MQ (S) { margin-bottom: 15px; }
+  }
 
-.criteria__item_second {
-  margin-bottom: 102px;
-  @extend .criteria__item;
-}
+  &__item {
+    text-align: left;
+    width:      $half;
 
-.criteria__item_third {
-  max-width:     700px;
-  margin-bottom: 99px;
-  @extend .criteria__item;
-}
+    &_first { margin-bottom: 47px; }
+    &_second { margin-bottom: 102px; }
+    &_third {
+      width:         70%;
+      margin-bottom: 99px;
+    }
+    &_fourth { margin-bottom: 61px }
 
-.criteria__item_fourth {
-  margin-bottom: 61px;
-  @extend .criteria__item;
-}
+    @include MQ (ML) { margin-bottom: 40px; }
+    @include MQ (M) { margin-bottom: 20px; }
+    @include MQ (S) { margin-bottom: 10px; }
+  }
 
-.criteria__count {
-  float:        left;
-  color:        #11d1a1;
-  margin-right: 40px;
-  font:         4rem 'Gilroy', sans-serif;
-  font-weight:  $extraBold;
+  &__count {
+    float:        left;
+    color:        #11d1a1;
+    margin-right: 40px;
+    font:         4rem $gilroy;
+    font-weight:  $extraBold;
+
+    @include MQ (ML) { margin-right: 20px; }
+    @include MQ (S) { margin-right: 5px; }
+  }
 }

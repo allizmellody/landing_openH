@@ -1,125 +1,212 @@
-.footer__back {
-  background: $primary-color;
-}
+@import '../base/mixins';
 
-.footer__area {
+.footer {
   color:   $gray;
   padding: 39px 15px 21px;
-}
 
-.footer__text {
-  font-size:  .78rem;
-  color:      #727272;
-  margin-top: 69px;
-}
-
-.footer__title {
-  color:         $white;
-  font-size:     1.33rem;
-  margin-bottom: 29px;
-}
-
-.link {
-  text-decoration: none;
-  color:           $gray;
-}
-
-.footer__column_small {
-  width:        15%;
-  margin-right: 20px;
-}
-
-.footer__column_medium {
-  width: 20%;
-}
-
-.footer__column_big {
-  position: relative;
-  width:    25%;
-}
-
-.footer__column_cont {
-  margin-right: 47px;
-}
-
-.footer__column_vk {
-  margin-right: 30px;
-}
-
-.footer__column_fb {
-  margin-right: 40px;
-}
-
-.footer__title_margin {
-  margin-left: 25px;
-}
-
-// companies
-.footer__list {
-  list-style: none;
-  padding:    0;
-  font-size:  .89rem;
-  li {
-    margin-bottom: 20px;
+  @include MQ (M) { padding-top: 29px; }
+  @include MQ (SM) { padding: 19px 15px 11px; }
+  @include MQ (S) {
+    padding-left:  10px;
+    padding-right: 10px;
   }
-  .link:hover {
+
+  &__back { background: $primary-color }
+
+  &__text {
+    text-align: center;
+    font-size:  .78rem;
+    color:      $dark-gray;
+    margin-top: 69px;
+
+    @include MQ (M) { margin-top: 40px; }
+    @include MQ (SM) { margin-top: 20px; }
+
+    &_small { font-size: .67rem; }
+  }
+
+  &__title {
     color:         $white;
-    border-bottom: 1px solid $orange;
-    font-weight:   $bold;
+    margin-bottom: 29px;
+    font-size:     1.33rem;
+    font-weight:   400;
+
+    @include MQ (M) { margin-bottom: 20px; }
+
+    &_margin {
+      margin-left: 25px;
+      @include MQ (SM) { margin-left: 20px; }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color:           $gray;
+  }
+
+  &__column {
+    &_small {
+      margin-right: 10px;
+
+      @include MQ (L) { width: 50%; }
+    }
+    &_big {
+      position: relative;
+      width:    20%;
+
+      @include MQ (L) { width: 30%; }
+      @include MQ (SM) { width: 50%; }
+    }
+    &_cont {
+      margin-right: 47px;
+
+      @include MQ (L) { margin: 5px; }
+    }
+    &_vk {
+      margin-right: 30px;
+      width:        40%;
+
+      @include MQ (L) {
+        width:        50%;
+        margin-right: 0;
+      }
+      @include MQ (SM) {
+        width:         100%;
+        margin-bottom: 10px;
+      }
+    }
+    &_fb {
+      width:        45%;
+      margin-right: 40px;
+
+      @include MQ (L) { margin-right: 0; }
+      @include MQ (SM) { width: 100%; }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding:    0;
+    font-size:  .89rem;
+
+    li {
+      margin-bottom: 20px;
+
+      @include MQ (M) { margin-bottom: 15px; }
+      @include MQ (SM) { margin-bottom: 10px; }
+    }
+
+    .footer__link:hover {
+      color:         $white;
+      border-bottom: 1px solid $orange;
+      font-weight:   $semiBold;
+    }
+  }
+
+  &__logo {
+    width:  11.6rem;
+    height: 3.2rem;
+  }
+  &__wrap {
+    width: 80%;
+
+    @include MQ (L) {
+      display: block;
+      width:   100%;
+    }
+    @include MQ (S) { width: 70%; }
+  }
+  &__wrapper {
+
+    &_1 {
+      width:         40%;
+      margin-bottom: 20px;
+    }
+    &_2 {
+      width:        60%;
+      margin-right: 10px;
+
+      @include MQ (SM) { display: block; }
+    }
+
+    @include MQ (L) { width: 100%; }
   }
 }
 
-// contacts
-.footer__contacts {
-  font: 0.89rem 'Lato', sans-serif;
-}
+.contacts {
+  font-size: 0.89rem;
 
-.contacts__icon {
-  width:        16px;
-  height:       16px;
-  margin-right: 9px;
-}
+  &__icon {
+    background:            url("../../img/icons/footer.png") no-repeat;
+    background-size:       auto 20px;
+    margin-right:          9px;
+    background-position-y: -3px;
 
-.contacts__icon_big {
-  width:        12px;
-  height:       17px;
-  margin-right: 9px;
-}
+    @include MQ (SM) {
+      background-size:       auto 15px;
+      background-position-y: -1px;
+      margin-right:          5px;
+    }
 
-.contacts__text {
-  margin-bottom: 30px;
-}
+    &_ph {
+      width:                 16px;
+      height:                14px;
+      background-position-x: 100%;
+    }
+    &_loc {
+      width:                 12px;
+      height:                15px;
+      margin-right:          13px;
+      background-position-x: 3%;
 
-.contacts__text_small {
-  margin-top: 10px;
-  font-size:  .67rem;
-}
+      @include MQ (SM) { margin-right: 7px; }
+    }
+  }
 
-.contacts__item_margin {
-  margin-bottom: 20px;
-}
+  &__text {
+    margin-bottom: 30px;
+    font-family:   $lato;
 
-.contacts__email {
-  float: right;
-}
+    @include MQ (M) { margin-bottom: 20px; }
 
-// right
-.footer__logo {
-  margin-bottom: 13px;
-}
+    &_small {
+      margin-top: 10px;
+      font-size:  .67rem;
+    }
+  }
 
-.footer__text_small {
-  font-size: .67rem;
+  &__item_margin {
+    margin-bottom: 20px;
+
+    @include MQ (M) { margin-bottom: 10px; }
+  }
+  &__email { float: left; }
+
+  .logo__link {
+    margin-bottom: 13px;
+    @extend .footer__logo;
+  }
 }
 
 .worked {
   align-items: baseline;
   position:    absolute;
   bottom:      0;
-  font:        .78rem 'Myriad Pro';
+  font-size:   .78rem;
+  font-weight: $bold;
+
   .company {
     margin-left: 26px;
-    font:        .89rem 'Gilroy', sans-serif;
+    font:        .89rem $gilroy;
     font-weight: $extraBold;
+
+    @include MQ (M) { margin-left: 14px; }
   }
+}
+
+.vk__wrapper {
+  width: 100%;
+
+  @include MQ (L) { width: 70%; }
+  @include MQ (S) { width: 80%; }
 }

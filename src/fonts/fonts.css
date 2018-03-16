@@ -1,56 +1,42 @@
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('Mark Simonson - Proxima Nova Alt Regular-webfont.eot');
-    src: url('Mark Simonson - Proxima Nova Alt Regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('Mark Simonson - Proxima Nova Alt Regular-webfont.woff') format('woff'),
-    url('Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype'),
-    url('Mark Simonson - Proxima Nova Alt Regular-webfont.svg#proxima_nova_altregular') format('svg');
-    font-weight: normal;
+    src: url('Proxima-Nova-Regular.woff2');
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'proxima_nova_ltsemibold';
-    src: url('Mark Simonson - Proxima Nova Semibold-webfont.eot');
-    src: url('Mark Simonson - Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('Mark Simonson - Proxima Nova Semibold-webfont.woff2') format('woff2'),
-    url('Mark Simonson - Proxima Nova Semibold-webfont.ttf') format('truetype'),
-    url('Mark Simonson - Proxima Nova Semibold-webfont.svg#proxima_nova_ltsemibold') format('svg');
-    font-weight: normal;
+    font-family: 'Proxima Nova';
+    src: url('Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'proxima_nova_altbold';
-    src: url('Mark Simonson - Proxima Nova Alt Bold-webfont.eot');
-    src: url('Mark Simonson - Proxima Nova Alt Bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('Mark Simonson - Proxima Nova Alt Bold-webfont.woff2') format('woff2'),
-    url('Mark Simonson - Proxima Nova Alt Bold-webfont.woff') format('woff'),
-    url('Mark Simonson - Proxima Nova Alt Bold-webfont.ttf') format('truetype'),
-    url('Mark Simonson - Proxima Nova Alt Bold-webfont.svg#proxima_nova_altbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('Gilroy-ExtraBold.eot');
-    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
-    url('Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('Gilroy-ExtraBold.woff') format('woff'),
-    url('Gilroy-ExtraBold.ttf') format('truetype');
+    font-family: 'Proxima Nova';
+    src: url('Proxima-Nova-Bold.woff2');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('Gilroy-Light.eot');
-    src: local('Gilroy Light'), local('Gilroy-Light'),
-    url('Gilroy-Light.eot?#iefix') format('embedded-opentype'),
-    url('Gilroy-Light.woff') format('woff'),
-    url('Gilroy-Light.ttf') format('truetype');
+    src: url('Gilroylight.woff2');
     font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroyextrabold.woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url("GothamPro-Bold.woff");
+    font-weight: 700;
     font-style: normal;
 }
 

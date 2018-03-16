@@ -1,142 +1,345 @@
-@import "../base/media";
-.header__area {
-  color: $white;
-}
-
-.header__back {
-  position:        absolute;
-  background:      url('../../img/header-bg.png') 50% 50%;
-  background-size: cover;
-  width:           100%;
-  height:          800px;
-  z-index:         -1;
-}
+@import '../base/mixins';
 
 .header {
-  position:      relative;
-  margin-bottom: 90px;
-  padding-left:  83px;
-}
+  color: $white;
 
-.nav__link {
-  text-decoration: none;
-  color:           $gray;
-  margin-right:    30px;
-  padding-top:     28px;
-  border-top:      3px solid transparent;
-  font-size:       .78rem;
+  &__back {
+    position:        absolute;
+    background:      url('../../img/header-bg.png') 70% 50%;
+    background-size: cover;
+    width:           100%;
+    height:          800px;
+    z-index:         -1;
 
-  &:hover {
-    border-top: 3px solid $orange;
+    @include MQ (L) { height: 700px; }
+    @include MQ (ML) { height: 600px; }
+    @include MQ (M) { height: 400px; }
+    @include MQ (SM) { height: 350px; }
+    @include MQ (S) { height: 250px; }
+  }
+
+  &__area {
+    position:      relative;
+    margin-bottom: 90px;
+    padding-left:  83px;
+
+    @include MQ (L) { padding-left: 60px; }
+    @include MQ (ML) { margin-bottom: 60px; }
+    @include MQ (M) {
+      width:        50%;
+      height:       2.67rem;
+      margin:       0 0 30px;
+      padding-left: 15px;
+      background:   linear-gradient(to right, #3d3d3d, transparent);
+    }
+
+    @include MQ (SM) { margin-bottom: 30px; }
+    @include MQ (S) {
+      margin-bottom: 20px;
+      padding-left:  20px;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    padding:    0;
+    margin:     0;
+
+    @include MQ (M) {
+      position:   absolute;
+      display:    none;
+      top:        2.67rem;
+      left:       0;
+      padding:    0 20px;
+      background: linear-gradient(to right, #3d3d3d, transparent);
+    }
+  }
+
+  &__content {
+    margin-bottom: 212px;
+    padding-left:  15px;
+    text-align:    left;
+
+    @include MQ (L) { margin-bottom: 112px; }
+    @include MQ (ML) { margin-bottom: 100px; }
+    @include MQ (M) { margin-bottom: 80px; }
+    @include MQ (SM) { margin-bottom: 60px; }
+    @include MQ (S) { margin-bottom: 40px; }
+
+    .logo__link {
+      margin-bottom: 76px;
+      @extend .header__logo;
+
+      @include MQ (ML) { margin-bottom: 60px; }
+      @include MQ (SM) { margin-bottom: 30px; }
+      @include MQ (S) { margin-bottom: 20px; }
+    }
+  }
+
+  &__logo {
+    width:  16.8rem;
+    height: 4.4rem;
+  }
+
+  &__title {
+    font:          2.22rem 'Gotham Pro', sans-serif, Tahoma;
+    font-weight:   $bold;
+    margin-bottom: 39px;
+
+    @include MQ (SM) { margin-bottom: 25px; }
+  }
+
+  &__label {
+    display:     none;
+    cursor:      pointer;
+    padding:     7px 5px;
+    color:       $orange;
+    font-weight: $extraBold;
+
+    @include MQ (M) { display: inline-block; }
+    @include MQ (SM) { padding-top: 5px }
+    @include MQ (S) { padding: 3px 0; }
   }
 }
 
-.header__content {
-  margin-bottom: 212px;
-  padding-left:  15px;
-  text-align:    left;
+.nav__link {
+  margin-right: 30px;
+  padding-top:  28px;
+  border-top:   3px solid transparent;
+  font-size:    .78rem;
+
+  &:hover { border-top: 3px solid $orange; }
+
+  @include MQ (L) { margin-right: 25px; }
+  @include MQ (ML) { padding-top: 18px; }
+  @include MQ (M) {
+    padding:       5px 0 5px;
+    border-top:    none;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-top:    none;
+      border-bottom: 1px solid $orange;
+    }
+  }
+  @include MQ (S) {
+  }
+
+  & a {
+    text-decoration: none;
+    color:           $gray;
+  }
 }
 
-.header__logo {
-  display:       block;
-  margin-bottom: 76px;
-}
-
-.header__title {
-  font:           2.22rem 'Gotham pro';
-  font-weight:    $bold;
-  letter-spacing: .001em;
-  margin-bottom:  39px;
-}
-
-.countries__container_shadow {
+.countries {
   margin-bottom: 69px;
   color:         $white;
   box-shadow:    $shadow;
+
+  @include MQ (ML) { margin-bottom: 40px; }
+  @include MQ (M) { margin-bottom: 20px; }
+  @include MQ (S) { margin-bottom: 10px; }
+
+  &__line {
+    background: linear-gradient(to top right, $orange, #fb726b);
+    width:      100%;
+    height:     5px;
+
+    @include MQ (SM) { height: 3px; }
+  }
+
+  &__item {
+    box-sizing:        border-box;
+    flex:              1;
+    text-align:        center;
+    padding-top:       21px;
+    padding-bottom:    26px;
+    margin-right:      -1px;
+    font:              .94rem $gilroy;
+    font-weight:       $light;
+    background-repeat: no-repeat;
+    background-size:   cover;
+    line-height:       20px;
+
+    @include MQ (L) {
+      padding-bottom: 20px;
+    }
+    @include MQ (ML) {
+      padding-top:    10px;
+      padding-bottom: 15px;
+    }
+    @include MQ (M) {
+      padding-top:    5px;
+      padding-bottom: 15px;
+    }
+    @include MQ (SM) {
+      padding-bottom: 10px;
+      padding-top:    3px;
+    }
+    @include MQ (S) {
+      padding-top:    0;
+      padding-bottom: 7px;
+    }
+
+    &_first { background-image: url('../../img/pictures/countries-1.png'); }
+    &_third { background-image: url('../../img/pictures/countries-3.png'); }
+    &_fourth { background-image: url('../../img/pictures/countries-4.png'); }
+    &_fifth { background-image: url('../../img/pictures/countries-5.png'); }
+    &_sixth { background-image: url('../../img/pictures/countries-6.png'); }
+    &_second {
+      background-image: url('../../img/pictures/countries-2.png');
+      padding-top:      11px;
+
+      @include MQ (ML) { padding-top: 6px; }
+      @include MQ (M) { padding-top: 2px; }
+      @include MQ (SM) { padding-top: 5px; }
+      @include MQ (S) { padding-top: 1px; }
+    }
+
+    &_right {
+      background: $primary-color;
+      padding:    16px 3px 0 3px;
+      font-size:  .94rem;
+      @extend .countries__item;
+
+      @include MQ (M) { padding-top: 6px; }
+      @include MQ (SM) { padding-top: 5px; }
+      @include MQ (S) { padding: 5px 0 0; }
+    }
+  }
+
+  &__icon {
+    background: url("../../img/icons/counties-icon.png") no-repeat;
+    width:      20px;
+    height:     20px;
+    margin:     0 auto;
+
+    @include MQ (ML) {
+      background-size: 15px;
+      width:           15px;
+      height:          15px;
+    }
+    @include MQ (M) {
+      background-size: 9px;
+      width:           9px;
+      height:          9px;
+    }
+    @include MQ (SM) {
+      background-size: 7px;
+      width:           7px;
+      height:          7px;
+    }
+  }
+
+  &__text {
+    margin-top: 34px;
+    font-size:  1.33rem;
+
+    @include MQ (L) {
+      margin-top: 30px;
+    }
+    @include MQ (ML) {
+      margin-top: 24px;
+    }
+    @include MQ (M) {
+      line-height: 15px;
+      margin-top:  10px;
+    }
+    @include MQ (SM) {
+      line-height: 10px;
+      margin-top:  5px;
+    }
+    @include MQ (S) { margin-top: 1px; }
+
+    &_backed {
+      background:     #3e3e3e;
+      width:          100%;
+      margin-top:     25px;
+      padding-top:    13px;
+      padding-bottom: 10px;
+      opacity:        .9;
+      font:           1rem $proximaNova;
+      font-weight:    $bold;
+
+      @include MQ (ML) {
+        margin-top:     20px;
+        padding-top:    5px;
+        padding-bottom: 5px;
+      }
+      @include MQ (M) {
+        line-height: 15px;
+        margin-top:  10px;
+        padding:     5px 0;
+      }
+      @include MQ (SM) {
+        line-height: 10px;
+        margin-top:  5px;
+        padding:     5px 0;
+      }
+      @include MQ (S) {
+        line-height: 8px;
+        margin:      0;
+      }
+    }
+
+    &_second {
+      margin-top: 24px;
+
+      @include MQ (ML) { margin-top: 18px; }
+      @include MQ (M) { margin-top: 3px; }
+    }
+
+    & p { margin-bottom: 0; }
+  }
+
+  &__title {
+    font:        1.67rem $gilroy;
+    font-weight: $extraBold;
+
+    @include MQ (S) { margin-bottom: 15px; }
+
+    &_spb {
+      margin: 0 auto;
+      width:  50%;
+
+      @include MQ (ML) { line-height: 15px; }
+      @include MQ (SM) { line-height: 10px; }
+      @include MQ (S) {
+        line-height: 8px;
+        width:       60%;
+      }
+    }
+  }
+
+  &__raising {
+    background:  url('../../img/back/progress-bg.png') no-repeat;
+    text-align:  center;
+    height:      34px;
+    padding-top: 16px;
+    color:       $asphalt;
+    font-weight: $bold;
+
+    @include MQ (ML) {
+      height:      24px;
+      padding-top: 10px;
+    }
+    @include MQ (M) {
+      height:      14px;
+      padding-top: 3px;
+    }
+    @include MQ (S) {
+      height:  9px;
+      padding: 1px;
+    }
+  }
 }
 
-.countries__line {
-  background: linear-gradient(to top right, $orange, #fb726b);
-  width:      100%;
-  height:     5px;
-}
+.icon__text {
+  margin: 9px 0 29px;
 
-.countries__area {
-  height: 150px;
-}
-
-.countries__item {
-  box-sizing:        border-box;
-  width:             15%;
-  height:            150px;
-  text-align:        center;
-  margin-right:      -1px;
-  padding-top:       21px;
-  font:              .94rem 'Gilroy', sans-serif;
-  font-weight:       $light;
-  background-repeat: no-repeat;
-  background-size:   cover;
-  line-height:       20px;
-}
-
-.countries__item_first {
-  background-image: url('../../img/countries-1.png');
-}
-
-.countries__text_backed {
-  background:     #3e3e3e;
-  width:          100%;
-  margin-top:     20px;
-  padding-top:    13px;
-  padding-bottom: 10px;
-  opacity:        .9;
-  font-weight:    $bold;
-}
-
-.countries__item_second {
-  background-image: url('../../img/countries-2.png');
-}
-
-.countries__item_third {
-  background-image: url('../../img/countries-3.png');
-}
-
-.countries__item_fourth {
-  background-image: url('../../img/countries-4.png');
-}
-
-.countries__item_fifth {
-  background-image: url('../../img/countries-5.png');
-}
-
-.countries__item_sixth {
-  background-image: url('../../img/countries-6.png');
-}
-
-.countries__item_right {
-  background:   $primary-color;
-  width:        14%;
-  margin-right: 0;
-  padding-top:  16px;
-  font-size:    .94rem;
-  @extend .countries__item;
-}
-
-.countries__text {
-  margin-top: 25px;
-  font-size:  1.33rem;
-}
-
-.countries__title {
-  font:        1.67rem 'Gilroy', sans-serif;
-  font-weight: $extraBold;
-}
-
-.countries__raising {
-  background:  url('../../img/progress-bg.png') no-repeat;
-  text-align:  center;
-  height:      34px;
-  padding-top: 16px;
-  color:       $asphalt;
-  font-weight: $bold;
+  @include MQ (L) { margin-bottom: 20px; }
+  @include MQ (ML) { margin: 0 0 9px; }
+  @include MQ (M) { margin: 5px 0 10px; }
+  @include MQ (SM) { margin: 2px 0 2px; }
+  @include MQ (S) { line-height: 8px; }
 }

@@ -1,48 +1,163 @@
+@import '../base/mixins';
+
 .advantages {
   padding-left: 76px;
-}
 
-.advantages__text {
-  margin-top:    16px;
-  margin-bottom: 63px;
-}
+  @include MQ (M) { padding-left: 46px; }
+  @include MQ (S) { padding-left: 26px; }
 
-.advantages__logo {
-  max-width: 400px;
-  margin-right: 20px;
-}
+  &__icon {
+    background:            url("../../img/icons/advantages.png") no-repeat;
+    background-size:       auto 72px;
+    background-position-y: -3px;
+    margin:                0 auto 20px auto;
 
-.advantages__area {
-  text-align:    center;
-  margin-bottom: 84px;
-  padding:       0 97px 0 15px;
-  font:          $main-font 'Gilroy', sans-serif;
-}
+    @include MQ (SM) {
+      background-size:       auto 42px;
+      background-position-y: -1px;
+      margin-bottom:         10px;
+    }
 
-.advantages__line_first {
-  margin-top: 56px;
-}
+    &_1_1 {
+      width:                 66px;
+      height:                66px;
+      background-position-x: 99%;
 
-.advantages__item_middle {
-  width:      33%;
-  margin-top: 141px;
-}
+      @include MQ (SM) {
+        width:  40px;
+        height: 40px;
+      }
+    }
+    &_1_2 {
+      width:                 66px;
+      height:                66px;
+      background-position-x: 77%;
 
-.advantages__item_central {
-  margin: 63px auto 0 auto;
-  @extend .advantages__item_middle;
-}
+      @include MQ (SM) {
+        width:  40px;
+        height: 40px;
+      }
+    }
+    &_2_1 {
+      width:                 39px;
+      height:                65px;
+      background-position-x: 1%;
 
-.advantages_line_last {
-  margin-top: 94px;
-}
+      @include MQ (SM) {
+        width:  23px;
+        height: 39px;
+      }
+    }
+    &_2_2 {
+      width:                 59px;
+      height:                56px;
+      background-position-x: 14%;
 
-.advantages__item {
-  width: $half;
-}
+      @include MQ (SM) {
+        width:  34px;
+        height: 34px;
+      }
+    }
+    &_3_1 {
+      width:                 63px;
+      height:                49px;
+      background-position-x: 55%;
 
-.advantages__image {
-  width:  240px;
-  height: 240px;
-  margin: 0 auto;
+      @include MQ (SM) {
+        width:  38px;
+        height: 30px;
+      }
+    }
+    &_3_2 {
+      width:                 63px;
+      height:                46px;
+      background-position-x: 34%;
+
+      @include MQ (SM) {
+        width:  37px;
+        height: 28px;
+      }
+    }
+  }
+
+  &__text {
+    &_main {
+      margin-bottom: 63px;
+
+      @include MQ (ML) { margin-bottom: 33px; }
+      @include MQ (S) { margin-bottom: 13px; }
+    }
+  }
+
+  &__wrapped {
+    margin-right: 20px;
+
+    @include MQ (S) { margin-right: 10px; }
+  }
+
+  &__logo {
+    width:  18.1rem;
+    height: 4.8rem;
+  }
+
+  &__area {
+    text-align:    center;
+    margin-bottom: 84px;
+    padding:       0 97px 0 15px;
+    font:          1rem $gilroy;
+    font-weight:   $light;
+
+    @include MQ (ML) { margin-bottom: 24px; }
+    @include MQ (S) {
+      margin-bottom: 14px;
+      padding-right: 27px;
+    }
+  }
+
+  &__line_first {
+    margin-top: 56px;
+
+    @include MQ (ML) { margin-top: 26px; }
+  }
+
+  &__line_last {
+    margin-top: 94px;
+
+    @include MQ (ML) { margin-top: 54px; }
+    @include MQ (M) { margin-top: 34px; }
+    @include MQ (SM) { margin-top: 14px; }
+  }
+
+  &__item {
+    flex:    1;
+    padding: 0 10px;
+
+    &_middle {
+      width:      33%;
+      margin-top: 141px;
+
+      @include MQ (ML) { margin-top: 71px; }
+      @include MQ (M) { margin-top: 51px; }
+      @include MQ (SM) { margin-top: 31px; }
+      @include MQ (S) { flex: 1; }
+    }
+
+    &_central {
+      width:  33%;
+      margin: 63px auto 0 auto;
+      @extend .advantages__item_middle;
+
+      @include MQ (ML) { margin-top: 33px; }
+      @include MQ (S) { display: none; }
+    }
+  }
+
+  &__image {
+    width:  13.3rem;
+    margin: 0 auto;
+  }
+
+  .logo__link {
+    @extend .advantages__logo;
+  }
 }

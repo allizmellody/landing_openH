@@ -1,8 +1,11 @@
-<div class="footer__column_medium footer__column_vk">
-  <div class="footer__title">Вконтакте</div>
+<div class="footer__column footer__column_vk">
+  <h2 class="footer__title">Вконтакте</h2>
   <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
-  <div id="vk_groups"></div>
+  <div class="vk__wrapper">
+    <div id="vk_groups"></div>
+  </div>
+  
   <script type="text/javascript">
-    VK.Widgets.Group("vk_groups", { mode: 3, color3: '3D3D3D' }, 149105685);
+    VK.Widgets.Group("vk_groups", { mode: 3, width: "auto", color3: '3D3D3D' }, 149105685);
   </script>
 </div>

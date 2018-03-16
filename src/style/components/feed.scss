@@ -1,64 +1,128 @@
-.feed__back_shadow {
-  background: url('../img/feedback-bg.png') no-repeat;
-  background-size: cover;
-  min-height: 545px;
-  box-shadow: $shadow;
-}
+@import '../base/mixins';
 
-.feed__back_opacity {
-  background-color: rgba(61, 61, 61, 0.8);
-  padding-top: 45px;
-  padding-bottom: 52px;
-}
-
-.feed__area {
+.feed {
   text-align: center;
-  color: $white;
-  max-width: 555px;
-  margin: 0 auto;
+  color:      $white;
+  max-width:  555px;
+  margin:     0 auto;
+
+  &__back {
+    &_shadow {
+      background:      url('../img/feedback-bg.png') no-repeat;
+      background-size: cover;
+      box-shadow:      $shadow;
+    }
+
+    &_opacity {
+      background-color: rgba(61, 61, 61, 0.8);
+      padding-top:      45px;
+      padding-bottom:   52px;
+
+      @include MQ (ML) {
+        padding-top:    25px;
+        padding-bottom: 32px;
+      }
+      @include MQ (S) { padding: 15px 0; }
+    }
+  }
+
+  &__title {
+    @include gilroyTitle(2rem, 21px);
+
+    @include MQ (SM) { margin-bottom: 11px; }
+    @include MQ (S) { margin-bottom: 5px; }
+  }
+
+  &__form {
+    max-width: 390px;
+    margin:    35px auto 0 auto;
+
+    @include MQ (ML) {
+      width:      330px;
+      margin-top: 25px;
+    }
+    @include MQ (M) { width: 280px; }
+    @include MQ (SM) {
+      width:      220px;
+      margin-top: 25px;
+    }
+    @include MQ (S) {
+      width:      160px;
+      margin-top: 15px;
+    }
+  }
+
+  &__input {
+    width:         361px;
+    height:        50px;
+    margin-bottom: 17px;
+
+    @include MQ (ML) {
+      width:  300px;
+      height: 40px;
+    }
+    @include MQ (M) { width: 250px; }
+    @include MQ (SM) {
+      width:         200px;
+      height:        30px;
+      padding-left:  12px;
+      margin-bottom: 12px;
+    }
+    @include MQ (S) {
+      width:  140px;
+      height: 20px;
+    }
+  }
+
+  &__label {
+    display:       block;
+    text-align:    left;
+    font-size:     .78rem;
+    margin-bottom: 46px;
+
+    @include MQ (ML) { margin-bottom: 26px; }
+    @include MQ (SM) { margin-bottom: 16px; }
+  }
+
+  &__checkbox {
+    float:        left;
+    cursor:       pointer;
+    outline:      none;
+    width:        25px;
+    height:       25px;
+    margin-right: 20px;
+
+    @include MQ (SM) {
+      width:  20px;
+      height: 20px;
+    }
+    @include MQ (S) {
+      width:        15px;
+      height:       15px;
+      margin-right: 10px;
+    }
+  }
+
+  &__map {
+    text-align: center;
+  }
 }
 
-.feed__title {
-  margin-bottom: 21px;
-  font: 2rem 'Gilroy', sans-serif;
-  font-weight: $extraBold;
-}
+.map {
+  height: 495px;
 
-.feed__form {
-  max-width: 390px;
-  margin: 35px auto 0 auto;
-}
+  @include MQ (L) { height: 400px; }
+  @include MQ (ML) { height: 300px; }
+  @include MQ (SM) { height: 250px; }
+  @include MQ (S) { height: 200px; }
 
-.feed__input {
-  width: 361px;
-  height: 50px;
-  margin-bottom: 17px;
-}
+  &__title {
+    text-align: center;
+    color:      $asphalt;
+    margin-top: 16px;
+    @include gilroyTitle(1.33rem, 14px);
 
-.feed__label {
-  display: block;
-  text-align: left;
-  font-size: .78rem;
-  margin-bottom: 46px;
+    @include MQ (SM) { margin: 11px 0 9px; }
+    @include MQ (S) { margin: 6px 0 4px; }
+  }
 }
-
-.input_checkbox {
-  float: left;
-  cursor: pointer;
-  outline: none;
-  width: 25px;
-  height: 25px;
-  margin-right: 20px;
-}
-
-.feed__map {
-  text-align: center;
-}
-
-.map__title {
-  color: $asphalt;
-  margin: 16px 0 14px;
-  font: 1.33rem 'Gilroy', sans-serif;
-  font-weight: $extraBold;
-}
-

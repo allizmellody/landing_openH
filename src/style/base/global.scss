@@ -1,55 +1,67 @@
-@import "../base/media";
+@import '../base/mixins';
+
 html {
-  font-size:   $main-font;
-  font-family: 'Proxima Nova', sans-serif;
+  font-size:   18px;
+  font-family: $proximaNova;
   color:       $primary-color;
+
+  @media only screen and (max-width: 1200px) { font-size: 95%; }
+  @include MQ (L) { font-size: 90%; }
+  @include MQ (ML) { font-size: 75%; }
+  @include MQ (M) { font-size: 65%; }
+  @include MQ (SM) { font-size: 50%; }
+  @include MQ (S) { font-size: 35%; }
+  @media only screen and (max-width: 320px) { font-size: 20%; }
+
+  body {
+    margin:  0;
+    padding: 0;
+    p, h1, h2, h3 { margin-top: 0; }
+  }
 }
 
-body {
-  margin:  0;
-  padding: 0;
-}
+.logo__link { display: inline-block; }
+.selected { color: $orange; }
+.bold { font-weight: $semiBold; }
 
 .flex {
   display: flex;
-}
 
-.selected {
-  display: inline;
-  color:   $orange;
-}
-
-.bold {
-  display:     inline;
-  font-weight: $bold;
+  &_end {
+    justify-content: flex-end;
+    @extend .flex;
+  }
 }
 
 .container {
   box-sizing: border-box;
   max-width:  1170px;
   margin:     0 auto;
-}
 
-.container_shadow {
-  box-shadow: $shadow;
-  @extend .container;
+  &_shadow {
+    box-shadow: $shadow;
+    @extend .container;
+  }
 }
 
 .title {
-  margin-bottom: 25px;
-  font-weight:   $extraBold;
-  font-size:     2.67rem;
-}
+  @include gilroyTitle(2.67rem, 25px);
 
-.title_margin_big {
-  margin-bottom: 40px;
-  font-family:   'Gilroy', sans-serif;
-  @extend .title;
-}
+  @include MQ (M) { margin-bottom: 15px; }
+  @include MQ (SM) { margin-bottom: 10px; }
 
-.title_camel {
-  text-transform: capitalize;
-  @extend .title;
+  &_margin_big {
+    margin-bottom: 40px;
+    @extend .title;
+
+    @include MQ (ML) { margin-bottom: 20px; }
+    @include MQ (S) { margin-bottom: 10px; }
+  }
+
+  &_camel {
+    text-transform: capitalize;
+    @extend .title;
+  }
 }
 
 .input {
@@ -58,7 +70,7 @@ body {
   color:         $asphalt;
   padding-left:  22px;
   border-radius: 4px;
-  font-size:     1.29rem;
+  font-size:     .89rem;
 
   &:hover, &:focus {
     outline: none;
