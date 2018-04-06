@@ -14,10 +14,13 @@
   &__back { background: $primary-color }
 
   &__text {
-    text-align: center;
+    text-transform: uppercase;
     font-size:  .78rem;
     color:      $dark-gray;
     margin-top: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include MQ (M) { margin-top: 40px; }
     @include MQ (SM) { margin-top: 20px; }
@@ -209,4 +212,9 @@
 
   @include MQ (L) { width: 70%; }
   @include MQ (S) { width: 80%; }
+}
+
+.icon__gitHub {
+  width: 40px;
+  margin-left: 50px;
 }

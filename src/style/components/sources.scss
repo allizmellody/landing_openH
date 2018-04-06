@@ -93,15 +93,15 @@
     }
 
     &_first {
-      background-image: url('../img/source-im-1.png');
+      background-image: url('../img/pictures/source-1.png');
       @extend .sources__image;
     }
     &_second {
-      background-image: url('../img/source-im-2.png');
+      background-image: url('../img/pictures/source-2.png');
       @extend .sources__image;
     }
     &_third {
-      background-image: url('../img/source-im-3.png');
+      background-image: url('../img/pictures/source-3.png');
       @extend .sources__image;
     }
   }
